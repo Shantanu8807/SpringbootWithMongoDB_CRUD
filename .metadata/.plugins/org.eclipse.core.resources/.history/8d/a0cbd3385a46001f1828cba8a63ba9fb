@@ -1,0 +1,5 @@
+package com.springmongo.model;
+
+public class Todo {
+
+}

@@ -1,0 +1,38 @@
+package com.springmongo.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.springmongo.model.Todo;
+import com.springmongo.repo.TodoRepo;
+
+@RestController
+public class TodoController {
+	
+	@Autowired
+	private TodoRepo todoRepo;
+	
+	
+	@GetMapping("/todos")
+	public ResponseEntity<?> getALlTodos()
+	{
+		List<Todo> list=todoRepo.findAll();
+		if(list.size()>0)
+		{
+		return ResponseEntity.status(HttpStatus.OK).body(list);
+				
+		}
+		else
+		{
+			
+		}
+	}
+	
+	
+
+}

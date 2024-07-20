@@ -1,0 +1,9 @@
+package com.springmongo.repo;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+import com.springmongo.model.Todo;
+
+public interface TodoRepo extends MongoRepository<Todo, String>{
+
+}

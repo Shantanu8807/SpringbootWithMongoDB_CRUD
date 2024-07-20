@@ -1,0 +1,40 @@
+package com.springmongo.model;
+
+import java.time.LocalDateTime;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
+@AllArgsConstructor
+@Document(collection="todos")
+public class Todo {
+	
+	@Id
+	private String id;
+	
+	@NotNull(message="todo cannot be Empty")
+	private String todo;
+	
+	@NotNull(message="todo cannot be Empty")
+	private String description;
+	
+	@NotNull(message="todo cannot be Empty")
+	private Boolean completed;
+	
+	@JsonIgnore
+	private LocalDateTime createdAt;
+	
+	private LocalDateTime updatedAt;
+	
+	
+
+}
