@@ -40,7 +40,6 @@ INDEX VERSION 1.134+C:\Users\ACER\OneDrive\Desktop\SpringbootWithMongoDB\.metada
 1016780202.index
 636834601.index
 1283693289.index
-1212949590.index
 2816739381.index
 933837326.index
 697531281.index
