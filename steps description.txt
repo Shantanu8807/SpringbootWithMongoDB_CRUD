@@ -32,4 +32,15 @@
 
 
 
+
+{
+    "id": "669ba34bd791ac6eb56d08c7",
+    "todo": "contact HR",
+    "description": "just do it",
+    "completed": false,
+    "createdAt": "2024-07-20T17:15:15.0023003",
+    "updatedAt": null
+}
+
+
 these are the basic steps required to set-up the springboot application with mongodb

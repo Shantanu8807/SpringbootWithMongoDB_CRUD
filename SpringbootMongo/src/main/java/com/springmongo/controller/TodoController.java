@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.springmongo.model.Todo;
@@ -82,6 +83,21 @@ public class TodoController {
 			return ResponseEntity.status(HttpStatus.ACCEPTED).body("Deleted Successfully");
 		} else {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Todo Not Found");
+		}
+	}
+	
+	@GetMapping("/getByDescription")
+	public ResponseEntity<List<Todo>> getByDescription(@RequestParam String description)
+	{ 
+		List<Todo> list=todoRepo.findTodoByDescription(description);
+		
+		if(list!=null)
+		{
+			return ResponseEntity.status(HttpStatus.ACCEPTED).body(list);
+		}
+		else
+		{
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
 		}
 	}
 
