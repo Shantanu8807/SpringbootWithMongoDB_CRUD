@@ -1,0 +1,35 @@
+1. create skeleton using sts or spring initializer and add dependency like web,Data Mongodb,lombok,validation and devtools.
+
+2. after that create model of todos and validations like notnull 
+
+3. then create Repo for Todo class and extends MongoRepository<Todo,String> 
+
+4. create controller class and add repo reference 
+
+5. create CRUD operations endpoints using get,post,put and delete mapping
+
+
+
+///Installation of mongodb 
+
+1. download community mongodb installer and then install and also download and install mongoshell
+
+2. create c:/data/db path in drive
+
+3. set path upto bin in system variables
+
+4. open cmd and run mongo --version
+
+5. run mongod to run the mongodb 
+
+6. open another cmd and run mongosh to run the mongo shell
+
+7. the use show databases
+
+8. use todomanager
+
+9. show collections
+
+
+
+these are the basic steps required to set-up the springboot application with mongodb

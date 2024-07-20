@@ -1,0 +1,25 @@
+package com.springmongo.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.springmongo.repo.TodoRepo;
+
+@RestController
+public class TodoController {
+	
+	@Autowired
+	private TodoRepo todoRepo;
+	
+	
+	@GetMapping("/todos")
+	public ResponseEntity<?> getALlTodos()
+	{
+		
+	}
+	
+	
+
+}
